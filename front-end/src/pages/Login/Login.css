@@ -1,0 +1,131 @@
+#login-page {
+  width: 100vw;
+  height: 100vh;
+  background-image: url(../../../public/images/moviegrid2.jpg);
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-repeat: no-repeat;
+}
+
+#login-page form {
+  height: auto;
+  width: 25%;
+  background: rgba(0, 0, 0, 0.82);
+  border-radius: 24px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(11px);
+  -webkit-backdrop-filter: blur(11px);
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  color: #fff;
+  box-sizing: border-box;
+  padding: 2em;
+}
+
+.form-title {
+  color: red;
+  font-size: 2rem;
+  margin: 10px 0px;
+  font-weight: 500;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  font-family: Poppins;
+  font-weight: 600;
+  margin: 5px 0px;
+}
+
+.form-group input {
+  outline: none;
+  font-size: 22px;
+  border: none;
+  padding: 7px 10px;
+  border-radius: 5px;
+  background-color: #ccc;
+  border: 1px solid #ccc;
+  font-family: Poppins;
+  margin-bottom: 20px;
+}
+
+.form-btn {
+  width: 100%;
+  font-size: 20px;
+  font-family: Poppins;
+  border-radius: 5px;
+  border: none;
+  padding: 8px 0px;
+  background-color: red;
+  font-weight: 500;
+  margin-top: 20px;
+  color: white;
+  cursor: pointer;
+  position: relative;
+}
+
+.loader-cont {
+  position: absolute;
+  right: 20px;
+  height: 100%;
+  width: 5em;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.loader-cont .loader-ball {
+  height: 8px;
+  width: 8px;
+  margin-right: 10px;
+  border-radius: 50%;
+  border: 2px solid #000;
+}
+
+.loader-ball:nth-child(1) {
+  animation: loading 400ms linear infinite alternate;
+}
+.loader-ball:nth-child(2) {
+  animation: loading 400ms linear infinite alternate;
+  animation-delay: .1s;
+}
+.loader-ball:nth-child(3) {
+    animation: loading 400ms linear infinite alternate;
+    animation-delay: .2s;
+
+}
+
+@keyframes loading {
+  from {
+    scale: 1;
+  }
+  to {
+    scale: 1.5;
+  }
+}
+
+.account_link {
+  display: flex;
+  margin: auto;
+  width: 100%;
+  justify-content: center;
+}
+
+.account_link h4 {
+  font-weight: 600;
+}
+
+.account_link h4:last-child {
+  cursor: pointer;
+  margin-left: 10px;
+  color: rgb(101, 101, 255);
+}
+
+.account_link h4:last-child:hover {
+  text-decoration: underline;
+}
