@@ -2,7 +2,6 @@ import "./Login.css";
 import React, { useState } from "react";
 import { NavLink, Redirect } from "react-router-dom";
 
-
 const LoginPage = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -15,7 +14,7 @@ const LoginPage = () => {
 
     let userObj = { email, password };
 
-    fetch("http://localhost:3000/login", {
+    fetch("https://phase-3-project-w1v8.onrender.com/login", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(userObj),
@@ -36,7 +35,6 @@ const LoginPage = () => {
   if (isLoggedIn) {
     return <Redirect exact to="/dashboard" />;
   }
-
 
   return (
     <main id="login-page">
@@ -83,8 +81,10 @@ const LoginPage = () => {
         </button>
         <span className="account_link">
           <h4>Don't have an account yet?</h4>
-          <h4 >
-            <NavLink className="formlink" to='/register'>Sign up</NavLink>
+          <h4>
+            <NavLink className="formlink" to="/register">
+              Sign up
+            </NavLink>
           </h4>
         </span>
       </form>

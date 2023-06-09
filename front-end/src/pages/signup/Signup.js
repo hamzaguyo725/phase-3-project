@@ -18,7 +18,7 @@ const SignupPage = () => {
     console.log(userObj);
     if (passwordConfirm === password) {
       setIsLoading(true);
-      fetch("http://localhost:3000/signup", {
+      fetch("https://phase-3-project-w1v8.onrender.com/signup", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(userObj),

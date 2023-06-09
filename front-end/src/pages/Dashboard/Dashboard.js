@@ -2,7 +2,6 @@ import { useEffect, useState } from "react";
 import "./Dashboard.css";
 
 const Dashboard = () => {
-
   const posterbaseurl = "https://image.tmdb.org/t/p/w500";
 
   const [movies, setMovies] = useState([]);
@@ -10,19 +9,14 @@ const Dashboard = () => {
   const [popular, setPopular] = useState([]);
 
   useEffect(() => {
-    fetch(
-      `http://localhost:3000/movies`
-    )
+    fetch(`https://phase-3-project-w1v8.onrender.com/movies`)
       .then((resp) => resp.json())
       .then((data) => {
-        setMovies(data.filter(m => m.genre === "now_playing"));
-        setTopRated(data.filter( m => m.genre === "top_rated"));
-        setPopular(data.filter( m => m.genre === "popular"))
+        setMovies(data.filter((m) => m.genre === "now_playing"));
+        setTopRated(data.filter((m) => m.genre === "top_rated"));
+        setPopular(data.filter((m) => m.genre === "popular"));
       });
   }, []);
-
-
-
 
   let moviesList = movies.map((m) => {
     return (
@@ -118,7 +112,7 @@ const Dashboard = () => {
     );
   });
 
-  console.log(popular)
+  console.log(popular);
 
   const [isMovieActive, setMovieActive] = useState(false);
   let maskClass = isMovieActive ? "active" : "disabled";
@@ -149,7 +143,7 @@ const Dashboard = () => {
               <div id="trend-slider">{popularList}</div>
             </div>
           </section>
-          <section id='now-playing' className="movie-sect">
+          <section id="now-playing" className="movie-sect">
             <h2 className="cont-title">Now Playing</h2>
             <div className="movie-slider">{moviesList}</div>
           </section>
