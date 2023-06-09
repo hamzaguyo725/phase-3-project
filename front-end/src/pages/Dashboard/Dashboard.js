@@ -40,7 +40,7 @@ const Dashboard = () => {
               viewBox="0 0 24 24"
               id="bookmark"
               height="56"
-              width="56"
+              
               
             >
               <g data-name="Layer 2">
