@@ -79,7 +79,7 @@ const Dashboard = () => {
               id="bookmark"
               height="56"
               width="56"
-              fill="aliceblue"
+              
             >
               <g data-name="Layer 2">
                 <path
