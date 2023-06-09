@@ -52,3 +52,24 @@ To get started clone this repository to your local space by running the command 
          npm run start
 
 ## Features
+
+The fliq movie db comes with a wide range of features to enhance user movie-watching experience.
+The features include:
+
+> User regestration and login to the plartform.
+
+> A user dashborb where you can view all the latest and top rated movies.
+
+> Movie details where you get a comprehensive overview of a movie before you decide to watch.
+
+> Ratings where you can get to see each movie ratings.
+
+## License
+
+This project is licensed by MIT.
+
+## Author
+
+This project was done by
+
+Hamza.M
